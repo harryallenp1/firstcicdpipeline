@@ -21,13 +21,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Step 3: Build and push the Docker image
+      # Step 3: Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: harryallenp1/firstcicdpipeline:latest
+          tags: harryallenp/firstcicdpipeline:latest # Updated with Docker Hub username and repo name
 
   deploy:
     runs-on: ubuntu-latest
